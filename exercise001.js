@@ -12,7 +12,7 @@ const promise = new Promise((resolve, reject) => {
 });
 
 // Your solution(s) to exercise001 here!
-promise
+/*promise
     .then((response) => {
         console.log(`Yay! Promise resolved with response: 
 	${response}`);
@@ -20,4 +20,15 @@ promise
     .catch((response) => {
         console.log(`Boo. Promise rejected with response: 
 	${response}`);
-    })
+    })*/
+
+async function consumingPromise() {
+    try {
+        const response = await promise
+        console.log(`Yay! Promise resolved with response: ${response}`);
+    } catch {
+        const response = 'error'
+        console.log(`Boo. Promise rejected with response: ${response}`);
+    }
+}
+consumingPromise()
