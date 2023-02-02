@@ -28,7 +28,7 @@ async function consumingPromise() {
         console.log(`Yay! Promise resolved with response: ${response}`);
     } catch (error) {
         const response = 'error'
-        console.log(`Boo. Promise rejected with response: ${response}`);
+        console.log(`Boo. Promise rejected with response: ${error}`);
     }
 }
 consumingPromise()
