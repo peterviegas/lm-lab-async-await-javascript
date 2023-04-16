@@ -19,17 +19,27 @@ const jsonTypicode = "https://jsonplaceholder.typicode.com/todos/1";
     }
 }*/
 
-async function fetchDataFunction(apiEndPoint) {
+// async function fetchDataFunction(apiEndPoint) {
+//     try {
+//         const response = await fetch(apiEndPoint);
+//         if (response.ok) {
+//             const json = await response.json();
+//             console.log(json);
+//         }
+//     } catch (error) {
+//         console.log(error);
+//     }
+// }
+
+const fetchDataFunction = async(apiEndPoint) => {
+
     try {
-        const response = await fetch(apiEndPoint);
-        if (response.ok) {
-            const json = await response.json();
-            console.log(json);
-        }
+        const response = await fetch(apiEndPoint)
+        const json = await response.json();
+        console.log(json);
     } catch (error) {
         console.log(error);
     }
-}
+};
 
-//fetchData(jsonTypicode);
 fetchDataFunction(jsonTypicode);
